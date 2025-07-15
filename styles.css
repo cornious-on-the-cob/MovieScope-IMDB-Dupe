@@ -358,3 +358,126 @@ hr {
   font-size: 12px;
 }
 
+/* 
+
+Movie 
+Search
+
+ */
+
+.search__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#movieName {
+  height: 50px;
+  width: 50%;
+  border: 2px solid;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 300ms ease;
+}
+
+#movieName:hover {
+  background-color: black;
+  color: white;
+}
+
+#search__btn {
+  height: 50px;
+  width: 80px;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  transition: all 300ms ease;
+}
+
+#search__btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.sort__select {
+  margin: 8px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #333;
+  border-radius: 20px;
+  background: #fff;
+  font-size: 0.9rem;
+}
+
+/* 
+
+MOVIE 
+SEARCH
+RESULTS
+
+ */
+
+.search__results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 10rem;
+  margin-top: 5rem;
+}
+
+.movie__card {
+  display: flex;
+  align-items: center;
+}
+
+.movie__description {
+  margin-left: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.movie-card__poster {
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.movie-card__title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* 
+
+LOADING
+
+ */
+
+#loading {
+  display: none;
+  text-align: center;
+  padding: 1rem;
+}
+
+.fa-spinner {
+  position: fixed;
+  font-size: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1000;
+  text-align: center;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
