@@ -1,0 +1,53 @@
+<!-- search.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://kit.fontawesome.com/a118cfdbd0.js" crossorigin="anonymous"></script>
+    <title>Search</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__bar">
+        <div class="logo__wrapper">
+          <img src="./assets/logo.png" alt="logo" class="logo" />
+        </div>
+        <div class="nav__links">
+          <a href="./index.html" class="nav__link">Home Page</a>
+          <a href="./search.html" class="nav__link">Explore Movies</a>
+        </div>
+        <button class="join__btn btn__black">Join</button>
+      </div>
+    </nav>
+
+    <div class="search__box">
+      <input
+        type="text"
+        id="movieName"
+        placeholder="Enter Movie/Show Name"
+      />
+
+      <select id="sortYear" class="sort__select">
+        <option value="">Sort by Year</option>
+        <option value="asc">Year ↑</option>
+        <option value="desc">Year ↓</option>
+      </select>
+
+      <button id="searchBtn" class="btn__black">Search</button>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div id="loading" style="display: none">
+          <i class="fa-solid fa-spinner fa-spin"></i>
+        </div>
+        <div id="results" class="search__results"></div>
+      </div>
+    </div>
+
+    <script src="./search.js" defer></script>
+  </body>
+</html>
+
